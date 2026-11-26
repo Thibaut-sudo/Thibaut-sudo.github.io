@@ -351,22 +351,6 @@ a { color: var(--accent-strong); }
   font-size: 0.8rem;
   color: var(--muted);
 }
-.diagram-panel {
-  margin: 0;
-  background: var(--navy);
-  border-radius: 16px;
-  overflow: hidden;
-  border: 1px solid var(--navy-2);
-}
-.diagram-panel img { width: 100%; }
-.diagram-panel figcaption {
-  padding: 14px 16px 16px;
-  color: #94a3b8;
-  font-size: 0.85rem;
-  background: #0b1220;
-}
-.diagram-panel figcaption strong { color: #e2e8f0; font-weight: 600; }
-
 /* Skills + parcours */
 .split {
   display: grid;
@@ -566,4 +550,22 @@ a { color: var(--accent-strong); }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .btn, .shot img { transition: none; }
+}
+
+.media-phones {
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+}
+.media-phones .shot-caption { grid-column: 1 / -1; }
+.shot-phone {
+  background: #1a1612;
+  border-radius: 22px;
+}
+.shot-phone img {
+  aspect-ratio: 390 / 844;
+  object-fit: cover;
+  object-position: top center;
+}
+@media (max-width: 900px) {
+  .media-phones { grid-template-columns: 1fr 1fr; }
 }

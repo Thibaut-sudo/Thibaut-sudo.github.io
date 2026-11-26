@@ -7,7 +7,7 @@ Site statique du portfolio, prévu pour GitHub Pages : <https://thibaut-sudo.git
 - Accueil, projets, compétences, parcours et contact
 - CV téléchargeable : `cv-thibaut-lenertz.pdf`
 - Captures d’écran réelles de [Belgian Slot Club](https://belgianslotclub.com)
-- Schémas d’architecture pour Artisan Pro, BaladeVélo et le générateur de QR codes (en attendant de vraies captures d’écran)
+- Captures d’écran réelles d’Artisan Pro, BaladeVélo et du générateur de QR codes
 
 ## Déploiement
 
