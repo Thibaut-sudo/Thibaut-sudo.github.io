@@ -33,16 +33,28 @@
         caption: "Belgian Slot Club — calendrier et export .ics (mode sombre)",
       },
     ],
-    artisan: [
+    atelier: [
       {
-        src: "assets/screenshots/artisan-pro-recettes.webp",
-        alt: "Écran Recettes d’Artisan Pro : liste des recettes avec coût de revient, prix de vente, marge et rentabilité",
-        caption: "Artisan Pro — recettes et marges",
+        src: "assets/screenshots/atelier-recettes.webp",
+        alt: "Écran Recettes de l’application de gestion d’atelier : liste des recettes avec coût de revient, prix de vente, marge et rentabilité",
+        caption: "Gestion d’atelier alimentaire — recettes et marges",
       },
       {
-        src: "assets/screenshots/artisan-pro-accueil.webp",
-        alt: "Tableau de bord Accueil d’Artisan Pro : production du jour, livraisons, besoins d’achat, alertes et actions rapides",
-        caption: "Artisan Pro — tableau de bord Accueil",
+        src: "assets/screenshots/atelier-accueil.webp",
+        alt: "Tableau de bord Accueil de l’application de gestion d’atelier : production du jour, livraisons, besoins d’achat, alertes et actions rapides",
+        caption: "Gestion d’atelier alimentaire — tableau de bord Accueil",
+      },
+    ],
+    watchparty: [
+      {
+        src: "assets/screenshots/watchparty-accueil.webp",
+        alt: "Page d’accueil de Watch Party : créer une salle pour un fichier local ou YouTube, avec un code d’accès optionnel",
+        caption: "Watch Party — accueil, création d’une salle",
+      },
+      {
+        src: "assets/screenshots/watchparty-salle.webp",
+        alt: "Salle Watch Party : lecture synchronisée d’une vidéo locale, badges hôte et connexion, chat et contrôles de lecture",
+        caption: "Watch Party — salle de lecture synchronisée",
       },
     ],
     balade: [

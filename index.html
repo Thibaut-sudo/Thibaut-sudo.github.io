@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Thibaut Lenertz — Développeur logiciel Java / TypeScript</title>
-  <meta name="description" content="Portfolio de Thibaut Lenertz, développeur logiciel Java / TypeScript à Saint-Nicolas (Belgique). Projets : Belgian Slot Club, Artisan Pro, BaladeVélo et générateur de QR codes.">
+  <meta name="description" content="Portfolio de Thibaut Lenertz, développeur logiciel Java / TypeScript à Saint-Nicolas (Belgique). Projets : Belgian Slot Club, gestion d’atelier alimentaire, Watch Party, BaladeVélo et générateur de QR codes.">
   <meta name="theme-color" content="#0f172a">
   <link rel="canonical" href="https://thibaut-sudo.github.io/">
   <meta property="og:title" content="Thibaut Lenertz — Développeur logiciel Java / TypeScript">
@@ -67,7 +67,7 @@
             <p class="section-kicker">Sélection</p>
             <h2>Projets</h2>
           </div>
-          <p class="section-intro">Quatre réalisations concrètes, dont une plateforme en production. Les dépôts privés et une démonstration peuvent être présentés sur demande.</p>
+          <p class="section-intro">Cinq réalisations concrètes, dont une plateforme en production. Les dépôts privés et une démonstration peuvent être présentés sur demande.</p>
         </div>
 
         <article class="project" id="belgian-slot-club">
@@ -126,13 +126,14 @@
           </div>
         </article>
 
-        <article class="project" id="artisan-pro">
+        <article class="project" id="atelier">
           <div>
             <div class="project-meta">
               <span class="pill">Application métier</span>
               <span class="pill-muted pill">Full-stack</span>
+              <span class="pill-muted pill">Projet confidentiel / nom anonymisé</span>
             </div>
-            <h3>Artisan Pro</h3>
+            <h3>ERP / Gestion d’atelier alimentaire</h3>
             <p class="pitch">Application métier pour un atelier alimentaire (traiteur / cuisine centrale) : recettes, production, stocks, achats et facturation.</p>
             <div class="facts">
               <div>
@@ -163,13 +164,59 @@
             </div>
           </div>
           <div class="media">
-            <button class="shot shot-main" type="button" data-gallery="artisan" data-index="0" aria-label="Agrandir l’écran Recettes et marges d’Artisan Pro">
-              <img src="assets/screenshots/artisan-pro-recettes.webp" width="1440" height="900" alt="Écran Recettes d’Artisan Pro : liste des recettes avec coût de revient, prix de vente, marge et rentabilité">
+            <button class="shot shot-main" type="button" data-gallery="atelier" data-index="0" aria-label="Agrandir l’écran Recettes et marges de l’application de gestion d’atelier">
+              <img src="assets/screenshots/atelier-recettes.webp" width="1440" height="900" alt="Écran Recettes de l’application de gestion d’atelier : liste des recettes avec coût de revient, prix de vente, marge et rentabilité">
             </button>
-            <button class="shot" type="button" data-gallery="artisan" data-index="1" aria-label="Agrandir le tableau de bord Accueil d’Artisan Pro">
-              <img src="assets/screenshots/artisan-pro-accueil.webp" width="1440" height="900" alt="Tableau de bord Accueil d’Artisan Pro : production du jour, livraisons, besoins d’achat, alertes et actions rapides">
+            <button class="shot" type="button" data-gallery="atelier" data-index="1" aria-label="Agrandir le tableau de bord Accueil de l’application de gestion d’atelier">
+              <img src="assets/screenshots/atelier-accueil.webp" width="1440" height="900" alt="Tableau de bord Accueil de l’application de gestion d’atelier : production du jour, livraisons, besoins d’achat, alertes et actions rapides">
             </button>
             <p class="shot-caption">Captures réelles de l’application — cliquez pour agrandir. Démo / code sur demande.</p>
+          </div>
+        </article>
+
+
+        <article class="project" id="watch-party">
+          <div>
+            <div class="project-meta">
+              <span class="pill">Application web</span>
+              <span class="pill-muted pill">Temps réel</span>
+            </div>
+            <h3>Watch Party</h3>
+            <p class="pitch">Application web locale pour regarder une vidéo en synchronisation avec des amis, sur le même réseau ou à distance.</p>
+            <div class="facts">
+              <div>
+                <h4>Contexte</h4>
+                <p>Création d’une salle (pseudo, mot de passe optionnel de 6 caractères), lecture d’un fichier local ou d’une vidéo YouTube, partage du lien (réseau local ou tunnel Cloudflare / ngrok) et chat en direct. L’hôte contrôle la lecture et peut transférer son rôle.</p>
+              </div>
+              <div>
+                <h4>Architecture &amp; points techniques</h4>
+                <p>Application TypeScript servie par Express, synchronisation en temps réel via Socket.io (WebSockets et polling). Fichiers locaux gérés avec multer et ffmpeg. Tests avec Vitest. Un lanceur desktop WatchParty.exe démarre le serveur et le tunnel.</p>
+              </div>
+              <div>
+                <h4>Défis résolus</h4>
+                <p>Synchroniser play, pause et seek entre hôte et spectateurs, exposer la salle hors du réseau local via un tunnel HTTPS, et préparer les fichiers vidéo pour une lecture web fiable (H.264 / AAC, conversion si besoin).</p>
+              </div>
+            </div>
+            <div class="tags">
+              <span class="tag">TypeScript</span>
+              <span class="tag">Express</span>
+              <span class="tag">Socket.io</span>
+              <span class="tag">ffmpeg</span>
+              <span class="tag">multer</span>
+              <span class="tag">Vitest</span>
+            </div>
+            <div class="project-actions">
+              <span class="pill-muted pill">Démo / code sur demande</span>
+            </div>
+          </div>
+          <div class="media">
+            <button class="shot shot-main" type="button" data-gallery="watchparty" data-index="0" aria-label="Agrandir l’accueil de Watch Party">
+              <img src="assets/screenshots/watchparty-accueil.webp" width="1440" height="900" alt="Page d’accueil de Watch Party : créer une salle pour un fichier local ou YouTube, avec un code d’accès optionnel">
+            </button>
+            <button class="shot" type="button" data-gallery="watchparty" data-index="1" aria-label="Agrandir la salle de lecture synchronisée de Watch Party">
+              <img src="assets/screenshots/watchparty-salle.webp" width="1440" height="900" alt="Salle Watch Party : lecture synchronisée d’une vidéo locale, badges hôte et connexion, chat et contrôles de lecture">
+            </button>
+            <p class="shot-caption">Captures réelles de l’application lancée en local — cliquez pour agrandir. Démo / code sur demande.</p>
           </div>
         </article>
 
@@ -281,7 +328,7 @@
             </div>
             <div class="skill-group">
               <h4>Back-end &amp; données</h4>
-              <div class="tags"><span class="tag">Spring Boot</span><span class="tag">NestJS</span><span class="tag">PostgreSQL</span><span class="tag">JPA</span><span class="tag">Prisma</span><span class="tag">Flyway</span><span class="tag">TypeORM</span><span class="tag">Redis</span><span class="tag">JWT</span><span class="tag">OAuth2</span></div>
+              <div class="tags"><span class="tag">Spring Boot</span><span class="tag">NestJS</span><span class="tag">Express</span><span class="tag">Socket.io</span><span class="tag">PostgreSQL</span><span class="tag">JPA</span><span class="tag">Prisma</span><span class="tag">Flyway</span><span class="tag">TypeORM</span><span class="tag">Redis</span><span class="tag">JWT</span><span class="tag">OAuth2</span></div>
             </div>
             <div class="skill-group">
               <h4>Front-end &amp; mobile</h4>
@@ -289,7 +336,7 @@
             </div>
             <div class="skill-group">
               <h4>Qualité &amp; déploiement</h4>
-              <div class="tags"><span class="tag">JUnit</span><span class="tag">Jest</span><span class="tag">Playwright</span><span class="tag">Docker</span><span class="tag">GitHub Actions</span><span class="tag">nginx</span></div>
+              <div class="tags"><span class="tag">JUnit</span><span class="tag">Jest</span><span class="tag">Vitest</span><span class="tag">Playwright</span><span class="tag">Docker</span><span class="tag">GitHub Actions</span><span class="tag">nginx</span></div>
             </div>
           </div>
 
