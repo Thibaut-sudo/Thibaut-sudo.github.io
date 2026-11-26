@@ -32,6 +32,18 @@
         alt: "Calendrier commun des clubs en mode sombre, prochain événement et export vers Google, Apple ou fichier .ics",
         caption: "Belgian Slot Club — calendrier et export .ics (mode sombre)",
       },
+      {
+        src: "assets/screenshots/bsc-marketplace.webp",
+        alt: "Marketplace de Belgian Slot Club en mode sombre : petites annonces de matériel de slot, recherche, filtres par catégorie et formulaire pour publier une annonce",
+        caption: "Belgian Slot Club — marketplace (mode sombre)",
+      },
+    ],
+    sonar: [
+      {
+        src: "assets/diagrams/sonar-architecture.webp",
+        alt: "Schéma d’architecture de SONAR : application Angular / NestJS, microservice Spring Boot (JWT / clé API), Ponto Connect (OAuth2 / SEPA) et PEPPOL (UBL), avec Bull / Redis, Socket.io et Firebase",
+        caption: "SONAR — schéma d’architecture (pas une capture d’écran)",
+      },
     ],
     atelier: [
       {
