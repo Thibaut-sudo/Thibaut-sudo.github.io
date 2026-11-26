@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thibaut Lenertz — Développeur logiciel Java / TypeScript</title>
+  <meta name="description" content="Portfolio de Thibaut Lenertz, développeur logiciel Java / TypeScript à Saint-Nicolas (Belgique). Projets : Belgian Slot Club, Artisan Pro, BaladeVélo et générateur de QR codes.">
+  <meta name="theme-color" content="#0f172a">
+  <link rel="canonical" href="https://thibaut-sudo.github.io/">
+  <meta property="og:title" content="Thibaut Lenertz — Développeur logiciel Java / TypeScript">
+  <meta property="og:description" content="Applications métier mises en production : plateforme web, API typées, mobile et desktop.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thibaut-sudo.github.io/">
+  <meta property="og:image" content="https://thibaut-sudo.github.io/assets/screenshots/bsc-accueil.webp">
+  <meta property="og:locale" content="fr_BE">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="logo" href="#">Thibaut <span>Lenertz</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Ouvrir le menu">
+        <span></span>
+      </button>
+      <nav id="nav" class="nav">
+        <a href="#projets">Projets</a>
+        <a href="#competences">Compétences</a>
+        <a href="#parcours">Parcours</a>
+        <a href="#contact">Contact</a>
+        <a class="nav-cv btn btn-sm header-cv" href="cv-thibaut-lenertz.pdf" download>Télécharger le CV</a>
+      </nav>
+      <a class="btn btn-sm header-cv" href="cv-thibaut-lenertz.pdf" download>Télécharger le CV</a>
+    </div>
+  </header>
+
+  <main id="contenu">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="wrap">
+        <div>
+          <p class="eyebrow">Saint-Nicolas, Belgique</p>
+          <h1 id="hero-title">Thibaut Lenertz</h1>
+          <p class="role">Développeur logiciel Java / TypeScript</p>
+          <p class="lead">Je conçois et mets en production des applications métier : plateformes web, API typées, outils desktop et applications mobiles.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projets">Voir les projets</a>
+            <a class="btn btn-secondary" href="cv-thibaut-lenertz.pdf" download>Télécharger le CV PDF</a>
+            <a class="btn btn-secondary" href="https://github.com/Thibaut-sudo" rel="noopener noreferrer" target="_blank">GitHub</a>
+            <a class="btn btn-secondary" href="mailto:thibaut.lenertz@gmail.com">Contact</a>
+          </div>
+        </div>
+        <div class="hero-photo">
+          <img src="assets/photo-thibaut.webp" width="720" height="720" alt="Portrait de Thibaut Lenertz">
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projets">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Sélection</p>
+            <h2>Projets</h2>
+          </div>
+          <p class="section-intro">Quatre réalisations concrètes, dont une plateforme en production. Les dépôts privés et une démonstration peuvent être présentés sur demande.</p>
+        </div>
+
+        <article class="project" id="belgian-slot-club">
+          <div>
+            <div class="project-meta">
+              <span class="pill">En production</span>
+              <span class="pill-muted pill">Plateforme web</span>
+            </div>
+            <h3>Belgian Slot Club</h3>
+            <p class="pitch">Plateforme web des clubs de slot racing belges, consultable en ligne sur <a href="https://belgianslotclub.com" rel="noopener noreferrer" target="_blank">belgianslotclub.com</a>.</p>
+            <div class="facts">
+              <div>
+                <h4>Contexte</h4>
+                <p>Une même application pour trois clubs (Slot 4000, SRCS, Rallyes Slot) : résultats, championnats, calendrier commun, forum et marketplace.</p>
+              </div>
+              <div>
+                <h4>Architecture &amp; points techniques</h4>
+                <p>Java 25 et Spring Boot 3.5 (Thymeleaf, Spring Security, JPA, Flyway), PostgreSQL en production, import des résultats circuit depuis Excel (Apache POI) et tests JUnit. Déploiement automatisé via GitHub Actions sur un Raspberry Pi, derrière nginx, systemd et Cloudflare, avec health check et page de maintenance.</p>
+              </div>
+              <div>
+                <h4>Défis résolus</h4>
+                <p>Faire cohabiter plusieurs clubs et un calendrier interopérable (.ics, Google Agenda, Apple Calendar), fiabiliser l’import Excel des résultats, et maintenir une mise en production réelle (CI/CD, Cloudflare, supervision).</p>
+              </div>
+            </div>
+            <div class="tags">
+              <span class="tag">Java 25</span>
+              <span class="tag">Spring Boot 3.5</span>
+              <span class="tag">Spring Security</span>
+              <span class="tag">Thymeleaf</span>
+              <span class="tag">JPA</span>
+              <span class="tag">Flyway</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Apache POI</span>
+              <span class="tag">JUnit</span>
+              <span class="tag">GitHub Actions</span>
+              <span class="tag">nginx</span>
+              <span class="tag">Cloudflare</span>
+            </div>
+            <div class="project-actions">
+              <a class="btn btn-primary" href="https://belgianslotclub.com" rel="noopener noreferrer" target="_blank">Voir le site en ligne</a>
+            </div>
+          </div>
+          <div class="media">
+            <button class="shot shot-main" type="button" data-gallery="bsc" data-index="0" aria-label="Agrandir la page d’accueil de Belgian Slot Club">
+              <img src="assets/screenshots/bsc-accueil.webp" width="1440" height="900" alt="Page d’accueil de Belgian Slot Club, avec le hero et la sélection des clubs Slot 4000 et SRCS">
+            </button>
+            <div class="shot-row">
+              <button class="shot" type="button" data-gallery="bsc" data-index="1" aria-label="Agrandir le classement championnat">
+                <img src="assets/screenshots/bsc-championnat.webp" width="1440" height="900" alt="Classement général du championnat Slot 4000, saison 2026, catégorie Groupe 5">
+              </button>
+              <button class="shot" type="button" data-gallery="bsc" data-index="2" aria-label="Agrandir le calendrier">
+                <img src="assets/screenshots/bsc-calendrier.webp" width="1440" height="1400" alt="Calendrier commun des clubs, prochain événement et export vers Google, Apple ou fichier .ics">
+              </button>
+            </div>
+            <p class="shot-caption">Captures réelles de belgianslotclub.com — cliquez pour agrandir.</p>
+          </div>
+        </article>
+
+        <article class="project" id="artisan-pro">
+          <div>
+            <div class="project-meta">
+              <span class="pill">Application métier</span>
+              <span class="pill-muted pill">Full-stack</span>
+            </div>
+            <h3>Artisan Pro</h3>
+            <p class="pitch">Application métier pour un atelier alimentaire (traiteur / cuisine centrale) : recettes, production, stocks, achats et facturation.</p>
+            <div class="facts">
+              <div>
+                <h4>Contexte</h4>
+                <p>Pilotage du quotidien de l’atelier : recettes et marges, planning de production, stocks et traçabilité (lots, réceptions, inventaires), achats, livraisons, devis, notes de crédit et facturation.</p>
+              </div>
+              <div>
+                <h4>Architecture &amp; points techniques</h4>
+                <p>API NestJS typée (Prisma / PostgreSQL), authentification par jeton signé, mots de passe hachés avec scrypt, droits par rôle appliqués côté serveur. Interface React / Vite branchée écran par écran sur l’API, PostgreSQL via Docker, tests E2E Jest (authentification et droits par rôle).</p>
+              </div>
+              <div>
+                <h4>Défis résolus</h4>
+                <p>Recalcul automatique des marges à chaque variation de prix d’achat, avec alertes et prix de vente cible. Modèles Prisma dédiés pour les lots, réceptions, inventaires, devis et notes de crédit.</p>
+              </div>
+            </div>
+            <div class="tags">
+              <span class="tag">NestJS</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Prisma</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">React</span>
+              <span class="tag">Vite</span>
+              <span class="tag">Docker</span>
+              <span class="tag">Jest</span>
+            </div>
+            <div class="project-actions">
+              <span class="pill-muted pill">Démo / code sur demande</span>
+            </div>
+          </div>
+          <figure class="diagram-panel">
+            <img src="assets/diagrams/artisan-pro.svg" width="840" height="520" alt="Schéma d’architecture d’Artisan Pro : interface React, API NestJS, Prisma et PostgreSQL">
+            <figcaption>
+              <strong>Schéma d’architecture</strong> — l’interface n’est pas publique. Une capture d’écran pourra remplacer ce schéma dès qu’elle sera disponible. Démo sur demande.
+            </figcaption>
+          </figure>
+        </article>
+
+        <article class="project" id="baladevelo">
+          <div>
+            <div class="project-meta">
+              <span class="pill">iOS / Android</span>
+              <span class="pill-muted pill">Application mobile</span>
+            </div>
+            <h3>BaladeVélo</h3>
+            <p class="pitch">Application mobile qui génère une boucle à vélo selon le point de départ, la distance, le type de terrain et le dénivelé.</p>
+            <div class="facts">
+              <div>
+                <h4>Contexte</h4>
+                <p>App Expo (iPhone et Android) : départ par GPS ou recherche, distance de 5 à 120 km, terrains route, mixte, gravel ou VTT, et prise en compte du dénivelé.</p>
+              </div>
+              <div>
+                <h4>Architecture &amp; points techniques</h4>
+                <p>React Native, Expo et TypeScript. Les itinéraires sont calculés sur le réseau cyclable OpenStreetMap via OSRM, sans compte ni clé API.</p>
+              </div>
+              <div>
+                <h4>Défis résolus</h4>
+                <p>Affichage sur la carte, régénération d’un parcours, enregistrement local sur le téléphone, export GPX et ouverture dans Plans ou Google Maps.</p>
+              </div>
+            </div>
+            <div class="tags">
+              <span class="tag">React Native</span>
+              <span class="tag">Expo</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">OpenStreetMap</span>
+              <span class="tag">OSRM</span>
+              <span class="tag">Géolocalisation</span>
+              <span class="tag">GPX</span>
+            </div>
+            <div class="project-actions">
+              <span class="pill-muted pill">Démo / code sur demande</span>
+            </div>
+          </div>
+          <figure class="diagram-panel">
+            <img src="assets/diagrams/baladevelo.svg" width="840" height="520" alt="Schéma fonctionnel de BaladeVélo : départ, critères, routage OSRM et export GPX">
+            <figcaption>
+              <strong>Schéma fonctionnel</strong> — illustration, pas une capture de l’application. Une vraie capture d’écran pourra la remplacer. Démo sur demande.
+            </figcaption>
+          </figure>
+        </article>
+
+        <article class="project" id="generateur-qr">
+          <div>
+            <div class="project-meta">
+              <span class="pill">macOS / Windows / Linux</span>
+              <span class="pill-muted pill">Application desktop</span>
+            </div>
+            <h3>Générateur de QR codes</h3>
+            <p class="pitch">Outil desktop pour saisir un texte ou une URL, générer le QR code en local et l’enregistrer en PNG — sans service cloud.</p>
+            <div class="facts">
+              <div>
+                <h4>Contexte</h4>
+                <p>Application Electron packagée pour les trois bureaux : DMG sur macOS, installeur NSIS et version portable sur Windows, AppImage sur Linux.</p>
+              </div>
+              <div>
+                <h4>Architecture &amp; points techniques</h4>
+                <p>Bridge sécurisé (preload) entre l’interface et le processus principal. Packaging multi-plateforme avec electron-builder. Toute la génération reste locale.</p>
+              </div>
+              <div>
+                <h4>Défis résolus</h4>
+                <p>Isoler correctement l’accès au système de fichiers via le preload, et livrer un installeur propre sur chaque système, sans dépendre d’un backend.</p>
+              </div>
+            </div>
+            <div class="tags">
+              <span class="tag">Electron</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">qrcode</span>
+              <span class="tag">electron-builder</span>
+            </div>
+            <div class="project-actions">
+              <span class="pill-muted pill">Démo / code sur demande</span>
+            </div>
+          </div>
+          <figure class="diagram-panel">
+            <img src="assets/diagrams/qr-generator.svg" width="840" height="520" alt="Schéma du générateur de QR codes : saisie locale, bridge sécurisé, export PNG et packaging">
+            <figcaption>
+              <strong>Schéma fonctionnel</strong> — illustration, pas une capture de l’application. Une vraie capture d’écran pourra la remplacer. Démo sur demande.
+            </figcaption>
+          </figure>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="competences" style="padding-top: 0;">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="section-kicker">Profil</p>
+            <h2>Compétences &amp; parcours</h2>
+          </div>
+        </div>
+        <div class="split">
+          <div class="card" id="stack">
+            <h3>Compétences</h3>
+            <div class="skill-group">
+              <h4>Langages</h4>
+              <div class="tags"><span class="tag">Java</span><span class="tag">TypeScript</span><span class="tag">JavaScript</span></div>
+            </div>
+            <div class="skill-group">
+              <h4>Back-end &amp; données</h4>
+              <div class="tags"><span class="tag">Spring Boot</span><span class="tag">NestJS</span><span class="tag">PostgreSQL</span><span class="tag">JPA</span><span class="tag">Prisma</span><span class="tag">Flyway</span><span class="tag">TypeORM</span><span class="tag">Redis</span><span class="tag">JWT</span><span class="tag">OAuth2</span></div>
+            </div>
+            <div class="skill-group">
+              <h4>Front-end &amp; mobile</h4>
+              <div class="tags"><span class="tag">React</span><span class="tag">Angular</span><span class="tag">React Native / Expo</span><span class="tag">Thymeleaf</span><span class="tag">Electron</span></div>
+            </div>
+            <div class="skill-group">
+              <h4>Qualité &amp; déploiement</h4>
+              <div class="tags"><span class="tag">JUnit</span><span class="tag">Jest</span><span class="tag">Playwright</span><span class="tag">Docker</span><span class="tag">GitHub Actions</span><span class="tag">nginx</span></div>
+            </div>
+          </div>
+
+          <div class="card" id="parcours">
+            <h3>Parcours</h3>
+            <ol class="timeline">
+              <li>
+                <span class="when">Sept. 2025 – Août 2026</span>
+                <strong>Développeur logiciel — Sonar Artists ASBL</strong>
+                <p>Conception et évolution de SONAR, un ERP / trésorerie orienté artistes et secteur culturel. Module Ponto Connect (virement SEPA authentifié OAuth2), facturation PEPPOL au format UBL, et microservice Java Spring Boot faisant le lien entre NestJS, Ponto Connect et Peppol (authentification inter-services JWT / clé API).</p>
+              </li>
+              <li>
+                <span class="when">Juil. 2025 – Août 2025</span>
+                <strong>Stage développeur logiciel — Dimagine</strong>
+                <p>Immersion chez le client final Sonar Artists : architecture et prototypage Angular / NestJS.</p>
+              </li>
+              <li>
+                <span class="when">Sept. 2024 – Juin 2025</span>
+                <strong>Formation Développement d’applications Java / Angular — Technifutur®</strong>
+                <p>Formation intensive en génie logiciel et développement d’applications.</p>
+              </li>
+              <li>
+                <span class="when">2019 – 2023</span>
+                <strong>Bachelier en Informatique de Gestion — HELMo Campus Guillemins</strong>
+                <p>POO (Java), bases de données et SQL, analyse et modélisation UML, développement web et gestion de projet en équipe.</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <h2>Travaillons ensemble</h2>
+          <p>Un échange, une démo des projets privés ou une question sur le CV : écrivez-moi.</p>
+        </div>
+        <ul class="contact-list">
+          <li>
+            <small>E-mail</small>
+            <a href="mailto:thibaut.lenertz@gmail.com">thibaut.lenertz@gmail.com</a>
+          </li>
+          <li>
+            <small>Téléphone</small>
+            <a href="tel:+32491335150">+32 491 33 51 50</a>
+          </li>
+          <li>
+            <small>GitHub</small>
+            <a href="https://github.com/Thibaut-sudo" rel="noopener noreferrer" target="_blank">github.com/Thibaut-sudo</a>
+          </li>
+          <li>
+            <small>CV</small>
+            <a href="cv-thibaut-lenertz.pdf" download>Télécharger le PDF</a>
+          </li>
+        </ul>
+      </div>
+      <p class="legal">© 2026 Thibaut Lenertz — Saint-Nicolas, Belgique.</p>
+    </div>
+  </footer>
+
+  <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Aperçu de la capture d’écran">
+    <div class="lightbox-bar">
+      <p id="lightbox-caption"></p>
+      <button class="lightbox-close" type="button" data-close aria-label="Fermer">×</button>
+    </div>
+    <div class="lightbox-stage">
+      <button class="lightbox-nav" type="button" data-prev aria-label="Image précédente">‹</button>
+      <img id="lightbox-image" alt="">
+      <button class="lightbox-nav" type="button" data-next aria-label="Image suivante">›</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
