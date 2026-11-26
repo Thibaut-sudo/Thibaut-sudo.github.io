@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Thibaut Lenertz — Développeur logiciel Java / TypeScript</title>
-  <meta name="description" content="Portfolio de Thibaut Lenertz, développeur logiciel Java / TypeScript à Saint-Nicolas (Belgique). Projets : Belgian Slot Club, gestion d’atelier alimentaire, Watch Party, BaladeVélo et générateur de QR codes.">
+  <meta name="description" content="Portfolio de Thibaut Lenertz, développeur logiciel Java / TypeScript à Saint-Nicolas (Belgique). Projets : Belgian Slot Club, SONAR, gestion d’atelier alimentaire, Watch Party, BaladeVélo et générateur de QR codes.">
   <meta name="theme-color" content="#0f172a">
   <link rel="canonical" href="https://thibaut-sudo.github.io/">
   <meta property="og:title" content="Thibaut Lenertz — Développeur logiciel Java / TypeScript">
@@ -67,7 +67,7 @@
             <p class="section-kicker">Sélection</p>
             <h2>Projets</h2>
           </div>
-          <p class="section-intro">Cinq réalisations concrètes, dont une plateforme en production. Les dépôts privés et une démonstration peuvent être présentés sur demande.</p>
+          <p class="section-intro">Six réalisations concrètes, dont une plateforme en production et un ERP professionnel en entreprise. Les dépôts privés et une démonstration peuvent être présentés sur demande.</p>
         </div>
 
         <article class="project" id="belgian-slot-club">
@@ -81,11 +81,11 @@
             <div class="facts">
               <div>
                 <h4>Contexte</h4>
-                <p>Une même application pour trois clubs (Slot 4000, SRCS, Rallyes Slot) : résultats, championnats, calendrier commun, forum et marketplace.</p>
+                <p>Une même application pour trois clubs (Slot 4000, SRCS, Rallyes Slot) : résultats, championnats, calendrier commun, forum, mode Direct et marketplace. Le mode Direct affiche le classement de la piste (positions, tours, meilleur tour et écart), mis à jour à chaque passage. La marketplace rassemble les petites annonces de matériel de slot : photos, recherche, filtres par catégorie et contact du vendeur.</p>
               </div>
               <div>
                 <h4>Architecture &amp; points techniques</h4>
-                <p>Java 25 et Spring Boot 3.5 (Thymeleaf, Spring Security, JPA, Flyway), PostgreSQL en production, import des résultats circuit depuis Excel (Apache POI) et tests JUnit. Déploiement automatisé via GitHub Actions sur un Raspberry Pi, derrière nginx, systemd et Cloudflare, avec health check et page de maintenance.</p>
+                <p>Java 25 et Spring Boot 3.5 (Thymeleaf, Spring Security, JPA, Flyway), PostgreSQL en production, import des résultats circuit depuis Excel (Apache POI) et tests JUnit. Le mode Direct actualise le classement de la piste par polling HTTP (environ une fois par seconde). Déploiement automatisé via GitHub Actions sur un Raspberry Pi, derrière nginx, systemd et Cloudflare, avec health check et page de maintenance.</p>
               </div>
               <div>
                 <h4>Défis résolus</h4>
@@ -114,15 +114,69 @@
             <button class="shot shot-main" type="button" data-gallery="bsc" data-index="0" aria-label="Agrandir la page d’accueil de Belgian Slot Club">
               <img src="assets/screenshots/bsc-accueil.webp" width="1440" height="900" alt="Page d’accueil de Belgian Slot Club, avec le hero et la sélection des clubs Slot 4000 et SRCS">
             </button>
-            <div class="shot-row">
+            <div class="shot-row shot-row-3">
               <button class="shot" type="button" data-gallery="bsc" data-index="1" aria-label="Agrandir le classement championnat">
                 <img src="assets/screenshots/bsc-championnat.webp" width="1440" height="900" alt="Classement général du championnat Slot 4000, saison 2026, catégorie Groupe 5">
               </button>
               <button class="shot" type="button" data-gallery="bsc" data-index="2" aria-label="Agrandir le calendrier">
                 <img src="assets/screenshots/bsc-calendrier.webp" width="1440" height="1400" alt="Calendrier commun des clubs, prochain événement et export vers Google, Apple ou fichier .ics">
               </button>
+              <button class="shot" type="button" data-gallery="bsc" data-index="3" aria-label="Agrandir la marketplace de Belgian Slot Club">
+                <img src="assets/screenshots/bsc-marketplace.webp" width="1440" height="1400" alt="Marketplace de Belgian Slot Club en mode sombre : petites annonces de matériel de slot, recherche, filtres par catégorie et formulaire pour publier une annonce">
+              </button>
             </div>
             <p class="shot-caption">Captures réelles de belgianslotclub.com, en mode sombre — cliquez pour agrandir.</p>
+          </div>
+        </article>
+
+
+        <article class="project" id="sonar">
+          <div>
+            <div class="project-meta">
+              <span class="pill">Expérience pro • En production</span>
+              <span class="pill-muted pill">Sept. 2025 – Août 2026</span>
+            </div>
+            <h3>SONAR</h3>
+            <p class="pitch">ERP / gestion de trésorerie orienté artistes et secteur culturel, développé pour Sonar Artists ASBL (PFI puis CDI).</p>
+            <div class="facts">
+              <div>
+                <h4>Contexte</h4>
+                <p>Conception et évolution de SONAR chez Sonar Artists ASBL (sept. 2025 – août 2026), après un stage chez Dimagine (juil. – août 2025) consacré à l’architecture et au prototypage Angular / NestJS pour le même client.</p>
+              </div>
+              <div>
+                <h4>Architecture &amp; points techniques</h4>
+                <p>Module Ponto Connect : facturation avec virement SEPA authentifié OAuth2, intégration open-banking et facturation PEPPOL au format UBL. Microservice Java Spring Boot faisant le lien entre NestJS, Ponto Connect et Peppol, avec authentification inter-services (JWT et clé API). Traitement asynchrone (Bull / Redis), chat et notifications push (Socket.io, Firebase).</p>
+              </div>
+              <div>
+                <h4>Qualité &amp; déploiement</h4>
+                <p>Tests unitaires Jest, tests E2E Playwright, CI/CD GitHub Actions et déploiements Docker multi-environnements.</p>
+              </div>
+            </div>
+            <div class="tags">
+              <span class="tag">Angular</span>
+              <span class="tag">NestJS</span>
+              <span class="tag">Java</span>
+              <span class="tag">Spring Boot</span>
+              <span class="tag">Ponto Connect</span>
+              <span class="tag">PEPPOL</span>
+              <span class="tag">Bull</span>
+              <span class="tag">Redis</span>
+              <span class="tag">Socket.io</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">Jest</span>
+              <span class="tag">Playwright</span>
+              <span class="tag">Docker</span>
+              <span class="tag">GitHub Actions</span>
+            </div>
+            <div class="project-actions">
+              <span class="pill-muted pill">ERP interne — démo / code sur demande</span>
+            </div>
+          </div>
+          <div class="media">
+            <button class="shot shot-main shot-diagram" type="button" data-gallery="sonar" data-index="0" aria-label="Agrandir le schéma d’architecture de SONAR">
+              <img src="assets/diagrams/sonar-architecture.webp" width="1440" height="900" alt="Schéma d’architecture de SONAR : application Angular / NestJS, microservice Spring Boot (JWT / clé API), Ponto Connect (OAuth2 / SEPA) et PEPPOL (UBL), avec Bull / Redis, Socket.io et Firebase">
+            </button>
+            <p class="shot-caption">Schéma d’architecture des flux vérifiés — ce n’est pas une capture d’écran. ERP interne, démo / code sur demande.</p>
           </div>
         </article>
 
@@ -328,7 +382,7 @@
             </div>
             <div class="skill-group">
               <h4>Back-end &amp; données</h4>
-              <div class="tags"><span class="tag">Spring Boot</span><span class="tag">NestJS</span><span class="tag">Express</span><span class="tag">Socket.io</span><span class="tag">PostgreSQL</span><span class="tag">JPA</span><span class="tag">Prisma</span><span class="tag">Flyway</span><span class="tag">TypeORM</span><span class="tag">Redis</span><span class="tag">JWT</span><span class="tag">OAuth2</span></div>
+              <div class="tags"><span class="tag">Spring Boot</span><span class="tag">NestJS</span><span class="tag">Express</span><span class="tag">Socket.io</span><span class="tag">PostgreSQL</span><span class="tag">JPA</span><span class="tag">Prisma</span><span class="tag">Flyway</span><span class="tag">TypeORM</span><span class="tag">Redis</span><span class="tag">Bull</span><span class="tag">JWT</span><span class="tag">OAuth2</span><span class="tag">Firebase</span></div>
             </div>
             <div class="skill-group">
               <h4>Front-end &amp; mobile</h4>

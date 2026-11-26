@@ -346,6 +346,9 @@ a { color: var(--accent-strong); }
 .shot-main img { aspect-ratio: 16 / 10; }
 .shot-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .shot-row .shot img { aspect-ratio: 16 / 11; object-position: top center; }
+.shot-row-3 { grid-template-columns: repeat(3, 1fr); }
+.shot-diagram { background: #f8fafc; }
+.shot-diagram img { object-fit: contain; background: #f8fafc; }
 .shot-caption {
   margin: 2px 0 0;
   font-size: 0.8rem;
@@ -508,6 +511,7 @@ a { color: var(--accent-strong); }
 .nav-cv { display: none; }
 
 @media (max-width: 900px) {
+  .shot-row-3 { grid-template-columns: 1fr; }
   .hero { padding: 32px 0 44px; }
   .hero .wrap,
   .project,
