@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 840 520" role="img" aria-labelledby="qrTitle qrDesc">
+  <title id="qrTitle">Fonctionnement du générateur de QR codes</title>
+  <desc id="qrDesc">Application desktop Electron : saisie locale, génération, export PNG, packaging multi-plateforme, aucun service cloud.</desc>
+  <rect width="840" height="520" rx="24" fill="#0f172a"/>
+  <text x="40" y="48" fill="#38bdf8" font-family="Inter, Segoe UI, sans-serif" font-size="12" font-weight="600" letter-spacing="2.2">SCHÉMA FONCTIONNEL</text>
+  <text x="40" y="78" fill="#f8fafc" font-family="Inter, Segoe UI, sans-serif" font-size="22" font-weight="700">Générateur de QR codes</text>
+  <text x="40" y="102" fill="#94a3b8" font-family="Inter, Segoe UI, sans-serif" font-size="13">Application desktop Electron — démo sur demande</text>
+
+  <!-- Abstract desktop window, clearly a diagram -->
+  <rect x="40" y="140" width="400" height="280" rx="16" fill="#1e293b" stroke="#334155"/>
+  <circle cx="64" cy="162" r="5" fill="#64748b"/>
+  <circle cx="80" cy="162" r="5" fill="#64748b"/>
+  <circle cx="96" cy="162" r="5" fill="#64748b"/>
+  <text x="240" y="166" text-anchor="middle" fill="#94a3b8" font-family="Inter, Segoe UI, sans-serif" font-size="11">Fenêtre (illustration)</text>
+  <!-- stylized QR-like grid, obviously schematic -->
+  <g transform="translate(145,200)" fill="#e2e8f0">
+    <rect width="22" height="22"/><rect x="28" width="10" height="10"/><rect x="50" width="22" height="22"/>
+    <rect y="28" width="10" height="10"/><rect x="28" y="28" width="10" height="22"/><rect x="62" y="28" width="10" height="10"/>
+    <rect y="50" width="22" height="22"/><rect x="50" y="50" width="22" height="22"/>
+    <rect x="8" y="8" width="6" height="6" fill="#1e293b"/>
+    <rect x="58" y="8" width="6" height="6" fill="#1e293b"/>
+    <rect x="8" y="58" width="6" height="6" fill="#1e293b"/>
+    <rect x="36" y="0" width="6" height="6"/>
+    <rect x="0" y="36" width="6" height="6"/>
+    <rect x="72" y="36" width="6" height="6"/>
+    <rect x="36" y="72" width="6" height="6"/>
+    <rect x="40" y="40" width="14" height="14"/>
+  </g>
+  <text x="240" y="390" text-anchor="middle" fill="#64748b" font-family="Inter, Segoe UI, sans-serif" font-size="11">Motif schématique — pas une capture d’écran</text>
+
+  <g font-family="Inter, Segoe UI, sans-serif">
+    <rect x="470" y="140" width="330" height="80" rx="14" fill="#1e293b"/>
+    <text x="494" y="174" fill="#f8fafc" font-size="15" font-weight="650">Saisie locale</text>
+    <text x="494" y="196" fill="#94a3b8" font-size="12">Texte ou URL, sans envoi réseau</text>
+
+    <rect x="470" y="236" width="330" height="80" rx="14" fill="#1e293b"/>
+    <text x="494" y="270" fill="#f8fafc" font-size="15" font-weight="650">Bridge sécurisé</text>
+    <text x="494" y="292" fill="#94a3b8" font-size="12">Preload entre l’interface et le processus principal</text>
+
+    <rect x="470" y="332" width="330" height="88" rx="14" fill="#1e293b"/>
+    <text x="494" y="366" fill="#f8fafc" font-size="15" font-weight="650">Export &amp; packaging</text>
+    <text x="494" y="388" fill="#94a3b8" font-size="12">PNG · DMG · NSIS / portable · AppImage</text>
+    <text x="494" y="406" fill="#64748b" font-size="11">electron-builder · aucun service cloud</text>
+  </g>
+
+  <text x="40" y="460" fill="#cbd5e1" font-family="Inter, Segoe UI, sans-serif" font-size="13">macOS, Windows et Linux — génération 100 % locale</text>
+</svg>
