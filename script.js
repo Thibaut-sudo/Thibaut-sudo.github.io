@@ -40,6 +40,16 @@
     ],
     sonar: [
       {
+        src: "assets/screenshots/sonar-mockup.webp",
+        alt: "Visuel public officiel de SONAR publié sur sonarartists.be : téléphone présentant le logo Sonar Artists",
+        caption: "SONAR — visuel public officiel (sonarartists.be)",
+      },
+      {
+        src: "assets/screenshots/sonar-login.webp",
+        alt: "Page de connexion publique de SONAR sur sonarartists.be, avec le logo et le formulaire e-mail / mot de passe",
+        caption: "SONAR — page de connexion (sonarartists.be)",
+      },
+      {
         src: "assets/diagrams/sonar-architecture.webp",
         alt: "Schéma d’architecture de SONAR : application Angular / NestJS, microservice Spring Boot (JWT / clé API), Ponto Connect (OAuth2 / SEPA) et PEPPOL (UBL), avec Bull / Redis, Socket.io et Firebase",
         caption: "SONAR — schéma d’architecture (pas une capture d’écran)",
